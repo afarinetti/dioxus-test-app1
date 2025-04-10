@@ -1,5 +1,8 @@
 [application]
 
+asset_dir = "assets"
+default_platform = "web"
+
 [web.app]
 
 # HTML title tag content
@@ -9,13 +12,18 @@ title = "dioxus-test-app1"
 [web.resource]
 
 # Additional CSS style files
-style = []
+style = [
+]
 
 # Additional JavaScript files
-script = []
+script = [
+]
 
 [web.resource.dev]
 
 # Javascript code file
 # serve: [dev-server] only
 script = []
+
+[web.watcher]
+reload_html = true

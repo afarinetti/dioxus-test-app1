@@ -8,6 +8,8 @@ edition = "2021"
 
 [dependencies]
 dioxus = { version = "0.6.0", features = [] }
+daisy_rsx = "=0.1.14"
+gloo = "0.11.0"
 
 [features]
 default = ["web"]
