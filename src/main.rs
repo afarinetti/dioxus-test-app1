@@ -1,3 +1,5 @@
+mod theme_manager;
+
 use dioxus::prelude::*;
 use dioxus::logger;
 use dioxus::logger::tracing;
@@ -12,9 +14,10 @@ const DAISY_CSS: &str = "https://cdn.jsdelivr.net/npm/daisyui@5";
 const DAISY_THEMES_CSS: &str = "https://cdn.jsdelivr.net/npm/daisyui@5/themes.css";
 
 fn main() {
-    // Init logger
+    // init logger
     logger::init(tracing::Level::DEBUG).expect("failed to init logger");
 
+    // launch the app
     dioxus::launch(App);
 }
 
@@ -42,6 +45,8 @@ fn App() -> Element {
 
 fn handle_click() {
     log!("clicked");
+
+    // get_theme_from_storage();
     
     let value: String = LocalStorage::get("theme").unwrap_or("light".to_string());
     // log!("value = %s", value);

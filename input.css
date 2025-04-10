@@ -3,7 +3,3 @@
 @plugin "daisyui" {
     themes: light --preferslight, dark --default;
 }
-
-/*@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));*/
-
-
